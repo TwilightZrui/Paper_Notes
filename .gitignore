@@ -6,3 +6,4 @@
 *.synctex.gz
 *.synctex(busy)
 *.toc
+.history/
