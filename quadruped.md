@@ -18,8 +18,13 @@ Offline motion libraries and online MPC for advanced mobility skills
 
 ## Deep Convolutional Terrain Assessment for Visual Reactive Footstep Correction on Dynamic Legged Robots
 
+## Where Should I Walk? Predicting Terrain Properties
+From Images Via Self-Supervised Learning
 
+## Safe Robot Navigation Via Multi-Modal
+Anomaly Detection
 
+TAMOLS: Terrain-Aware Motion Optimization for Legged Systems
 # TODO: 
 ### Locomotion Policy Guided Traversability Learning using Volumetric Representations of Complex Environments
 0815
@@ -31,3 +36,7 @@ Barrett
 Motion planning for quadrupedal locomotion: Coupled planning, terrain mapping, and whole-body control
 
 Single-shot Foothold Selection and Constraint Evaluation for Quadruped Locomotion
+
+RLOC: Terrain-Aware Legged Locomotion using
+Reinforcement Learning and Optimal Control
+
