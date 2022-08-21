@@ -1,5 +1,49 @@
-### [220817]Single-shot Foothold Selection and Constraint Evaluation for Quadruped Locomotion
+### [220821]Trajectory and Foothold Optimization using Low-Dimensional Models for Rough Terrain Locomotion
 
+* 2017
+
+### [220819]RLOC: Terrain-Aware Legged Locomotion using Reinforcement Learning and Optimal Control
+
+* 2021-CORL
+
+### [220818]Single-shot Foothold Selection and Constraint Evaluation for Quadruped Locomotion
+
+* 2019-ICRA
+* 规划最优落足点的原则：
+  1、落足点应该远离边缘、陡峭台阶等危险地带
+  2.选定的落足点应该在工作空间内，不要超过运动学极限
+  3、避免自碰撞、和地形碰撞
+* 数据集采集：
+  * 在仿真中采集数据，用迁移学习方法用到实物狗上
+  * 在仿真生成一个12*12地图
+  * 由于机器人是对称的，所以训练右腿的数据，用到左腿上，因此只用收集右侧两条腿的数据，训练两个模型
+  * 训练数据生成：如何评价仿真环境中落足点分数：
+    * 硬约束：（）255
+      * 工作空间极限
+      * 自碰撞和地面碰撞（用碰撞检测库）
+      * **【运动学有解？】**
+    * 软约束：
+      * 运动学稳定裕度
+      * 地形代价
+* network:
+  * model: ERF
+  * cost分了14个类
+  * optimized objective: cross-entropy loss and regularization loss
+* 推理：
+  * cfinal = c f +k ·dn （k人工调）
+  * Pipeline: 拿到子图、转化为normalized image、计算距离，推理
+* 接入了控制框架中：![1660893302957](image/quadruped/1660893302957.png)
+* 认识：
+  * 用学习方法端到端做落足点规划问题，涉及到语义分割领域的内容比较多，在场景层面，像素级别的语义分割
+  * 网络针对化的改进理解的不够好
+* 缺点：
+  * 没有在生成网络时，考虑姿态可达性。
+* **可以改进的部分：**
+  * 学习方法是否可以把姿态可达性也考虑进网络的生成traning set过程中，即在约束中加这部分
+  * 或者，学习直接学出来下一个步态周期，base目标位姿
+  * 我现在的方法，没有稳定裕度接口，远离障碍物边缘是个很重要的事情，程序实现中应该加入这一部分
+  * 我应该做出来一版用优化方法解决的，作为对比实验
+  * 问一下控制组，如果落足点规划模块把身体位姿一起计算出来，那边能实现吗
 
 ### [220817]Search-based Foot Placement for Quadrupedal Traversal of Challenging Terrain
 
