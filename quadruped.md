@@ -1,10 +1,4 @@
-### [220821]Trajectory and Foothold Optimization using Low-Dimensional Models for Rough Terrain Locomotion
-
-* 2017
-
-### [220819]RLOC: Terrain-Aware Legged Locomotion using Reinforcement Learning and Optimal Control
-
-* 2021-CORL
+### [220827]Online Walking Motion and Foothold Optimization for Quadruped Locomotion
 
 ### [220818]Single-shot Foothold Selection and Constraint Evaluation for Quadruped Locomotion
 
@@ -106,6 +100,13 @@
 # terrain
 
 ### [220801]TAMOLS: Terrain-Aware Motion Optimization for Legged Systems
+
+落足点规划问题解耦
+
+应该关注的是，落足点是怎么嵌入优化问题的，
+
+怎么嵌入能把落足点结合地形解出来，这应该是创新点
+
 
 # Sub
 

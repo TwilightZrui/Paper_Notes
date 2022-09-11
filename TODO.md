@@ -12,13 +12,22 @@ Trajectory and Foothold Optimization using Low-Dimensional Models for Rough Terr
 
 IIT 大小
 
-
 Fast, Robust Quadruped Locomotion over Challenging Terrain
 
 Learning, planning, and control for
 quadruped locomotion over challenging
 terrain
 
+
+
+### [220821]Trajectory and Foothold Optimization using Low-Dimensional Models for Rough Terrain Locomotion
+
+* 2017
+
+### [220819]RLOC: Terrain-Aware Legged Locomotion using Reinforcement Learning and Optimal Control
+
+* 2021-CORL
+* 
 
 ### network
 
