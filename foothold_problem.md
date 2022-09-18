@@ -33,3 +33,7 @@
 * 最大化朝目标progress
 * 在机器人运动学范围内
 * 最大化稳定性：下个周期的support polygons最大
+
+# 步态
+
+![1663211138814](image/foothold_problem/1663211138814.png)

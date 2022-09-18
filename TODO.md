@@ -18,8 +18,6 @@ Learning, planning, and control for
 quadruped locomotion over challenging
 terrain
 
-
-
 ### [220821]Trajectory and Foothold Optimization using Low-Dimensional Models for Rough Terrain Locomotion
 
 * 2017

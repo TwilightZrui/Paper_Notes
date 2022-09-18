@@ -1,4 +1,33 @@
+### [220918]Reliable Trajectories for Dynamic Quadrupeds using Analytical Costs and Learned Initializations
+
+* 2020 ICRA
+* 对Towr 库的改进
+
+### [220917]Automatic Gait Pattern Selection for Legged Robots
+
+* 2020IROS
+*
+
+### [220917]DeepGait: Planning and Control of Quadrupedal Gaits using Deep Reinforcement Learning
+
+### [220917]Reinforcement Learning with Evolutionary Trajectory Generator: A General Approach for Quadrupedal Locomotion
+
+* 2022 RAL
+* 百度
+* [RL]
+
+### [220911]Learning Locomotion over Rough Terrain using Terrain Templates
+
+* 2009
+* 问题定义：
+  * 每个候选落足点是由一个特征向量表征的
+* [RL]
+
 ### [220827]Online Walking Motion and Foothold Optimization for Quadruped Locomotion
+
+* 2017-ICRA
+* Alexander W.  COM +落足点  一个优化问题
+* 从模型角度解释了，为什么要COM foothold plann要耦合
 
 ### [220818]Single-shot Foothold Selection and Constraint Evaluation for Quadruped Locomotion
 
@@ -106,7 +135,6 @@
 应该关注的是，落足点是怎么嵌入优化问题的，
 
 怎么嵌入能把落足点结合地形解出来，这应该是创新点
-
 
 # Sub
 
