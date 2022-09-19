@@ -1,3 +1,44 @@
+### [220919]Perceptive Locomotion through Nonlinear Model Predictive Control
+
+* 2022-TRO
+* 
+
+### [220919]Coupling Vision and Proprioception for Navigation of Legged Robots
+
+* 2022-CVPR
+* 外部感知和视觉结合
+* 考虑运动能力，能不能走
+* 三个部分：
+  * 以速度为条件的步行策略：用RL，让机器人用不同速度行走
+  * 安全顾问模块
+  * 规划模块，它们一起协同利用视觉和本体感觉来为有腿机器人导航。
+* pipeline
+
+利用2D相机生成occupancy map和对应的到达目标的cost map。利用FMM（Fast Marching Method）方法生成目标路径。在运动过程中摔倒预测器会根据地形特点生成速度限制，如果预测可能会摔倒，safety advisor会将最大速度限制减小，否则会增加最大速度限制。碰撞检测模块如果检测碰撞。safety advisor模块会在生成的cost map中增加9cm*3cm固定大小表示障碍物，再进行重新路径规划。
+
+safety advisor模块中的摔倒预测模块和碰撞检测模块是两个结构相同的网络。利用一个线性层将状态和动作映射为32维向量x，然后使用3层1维卷积得到扁平化特征，将扁平化特征输入到2层MLP含有8个隐藏单元和一个sigmoid函数得到一个预测概率值。
+
+障碍物检测模块：通过收集机器人行走/碰撞障碍物的数据，以在线方式训练模块。
+
+摔倒检测模块：收集连续t~t+49个x和机器人状态y，如果机器人在t+100时候摔倒为1，否则为0。该模块也以在线方式进行训练，训练过程中在规定的范围中随机采样环境的摩擦系数，线/角速度和有效载荷值。
+
+其中**适应模块**与**基础策略**分别是他们前两个工作[1][2],
+
+**适应模块**的输入是前20个机器人历史状态x和对应的动作，输出一个8维向量，表示外部环境向量。在仿真环境中外部环境设置是已知的，所以可以利用监督学习进行训练。
+
+**基础策略**的输入是30维感知状态x，期望的线速度和角速度，以及前一时刻的12维动作和外部信息的8维向量，输出12维关节角度。利用PPO训练方法训练网络。
+
+[1] Minimizing energy consumption leads to the emergence of gaits in legged robots
+
+[2] RMA: Rapid Motor Adaptation for Legged Robots
+
+### [220918]Visual-Locomotion: Learning to Walk on Complex Terrains with Vision
+
+* 2021-CORL
+* RL
+* 作者：
+* 感知+落足点规划用强化学习方法替代了
+
 ### [220918]Reliable Trajectories for Dynamic Quadrupeds using Analytical Costs and Learned Initializations
 
 * 2020 ICRA
@@ -6,7 +47,7 @@
 ### [220917]Automatic Gait Pattern Selection for Legged Robots
 
 * 2020IROS
-*
+* 
 
 ### [220917]DeepGait: Planning and Control of Quadrupedal Gaits using Deep Reinforcement Learning
 
@@ -126,9 +167,9 @@
 
 * legs and wheels
 
-# terrain
-
 ### [220801]TAMOLS: Terrain-Aware Motion Optimization for Legged Systems
+
+* 2022-TRO
 
 落足点规划问题解耦
 
