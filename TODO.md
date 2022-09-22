@@ -4,7 +4,7 @@ Gait and Trajectory Optimization for Legged Systems Through Phase-Based End-Effe
 
 Motion planning for quadrupedal locomotion: Coupled planning, terrain mapping, and whole-body control
 
-RLOC: Terrain-Aware Legged Locomotion using Reinforcement Learning and Optimal Control
+**RLOC: Terrain-Aware Legg**ed Locomotion using Reinforcement Learning and Optimal Control
 
 Perception, planning, and control for autonomous walking with the Ambler planetary rover
 
