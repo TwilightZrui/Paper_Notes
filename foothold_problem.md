@@ -33,6 +33,7 @@
 * 最大化朝目标progress
 * 在机器人运动学范围内
 * 最大化稳定性：下个周期的support polygons最大
+* 多步规划：long horizon
 
 # 步态
 
