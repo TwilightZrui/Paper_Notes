@@ -54,8 +54,42 @@ safety advisor模块中的摔倒预测模块和碰撞检测模块是两个结构
 
 * 2021-CORL
 * RL
-* 作者：
+* 作者：Wenhao Yu1, google
 * 感知+落足点规划用强化学习方法替代了
+* 把感知和motion planning 模块用NN代替
+* 结构：
+* a highlevel vision policy and a low-level motion controller.
+  * The high-level vision policy takes two **depthimages** and **outputs the desired pose of the robot’s base and foothold placements** for all swing legs,thereby eliminating the need for a complex SLAM algorithm.（base pose 和落足位置）
+  * The low-level locomotion controller takes the high-level vision policy output, and **computes the target motor positions and torques to achieve the desired states.（把目标转化为电机位置和力矩）**
+* 文章的合理性体现：
+  * 规划了long horizen foothold
+  * 规划了body pose 和速度
+* Reward:
+  * 奖励：COM 加速度，希望x方向以最大速度前进
+  * 惩罚：希望不要在y方向有位移
+  * 惩罚：yaw角，希望不要在超其他方向前进
+* 终止条件：
+  * 机器人失去平衡了
+  * 迈步在障碍物范围内了
+  * 机器人达到了一种无效关节构型
+* Motion Controller
+  * * 这篇文章用的是MIT cheetah 3
+    * 把落足位置和base target转化成motor position and torque commands
+    * 分开控制swing & stance legs
+      * swing leg controller：
+        * 起始点到目标点插值
+        * 落足位置通过IK转换成关节角
+        * 关节角用PD跟踪
+      * stance leg controller：
+        * 通过计算足端和地面之间的接触力，实现base所需的目标位置和速度
+        * 把机器人动力学近似成质心动力学，该问题被建模成MPC问题
+        * 优化得到的接触力被映射成站立腿的关节力矩（痛jacobian transpose）
+* Sim-to-real Transfer：
+* 强化学习过程细节：
+
+![1663949610925](image/quadruped/1663949610925.png)
+
+![1663952526932](image/quadruped/1663952526932.png)
 
 ### [220918]Reliable Trajectories for Dynamic Quadrupeds using Analytical Costs and Learned Initializations
 
