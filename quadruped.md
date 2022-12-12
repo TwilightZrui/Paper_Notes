@@ -1,3 +1,9 @@
+### [221212]Navigation Planning for Legged Robots in Challenging Terrain
+
+* 2016-IROS
+* path plan:rrt*
+* OMPL to smooth the solution path
+
 ### [220919]Perceptive Locomotion through Nonlinear Model Predictive Control
 
 * 2022-TRO
@@ -59,7 +65,7 @@ safety advisor模块中的摔倒预测模块和碰撞检测模块是两个结构
 ### [220917]Automatic Gait Pattern Selection for Legged Robots
 
 * 2020IROS
-* 
+*
 
 ### [220917]DeepGait: Planning and Control of Quadrupedal Gaits using Deep Reinforcement Learning
 
@@ -147,7 +153,7 @@ safety advisor模块中的摔倒预测模块和碰撞检测模块是两个结构
 * 为什么用voxel map，不用elevation map，这篇文章要解决多层障碍物的问题吗
 * 关注下语义信息到底是怎么结合进机器人导航问题中的
 * 不太懂稀疏CNN是怎么专门用于解决这个问题的，创新性在网络吗
-* 
+*
 
 ### [220805] Where Should I Walk? Predicting Terrain Properties From Images Via Self-Supervised Learning
 
