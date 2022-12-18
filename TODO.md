@@ -32,3 +32,7 @@ terrain
 ERFNet: Efficient Residual Factorized ConvNet for Real-Time Semantic Segmentation
 
 Deep Residual Learning for Image Recognition
+
+1.
+Learning a State Representation and Navigation
+in Cluttered and Dynamic Environments
