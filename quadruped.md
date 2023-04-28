@@ -1,19 +1,25 @@
+### [220930]Advanced Skills by Learning Locomotion and Local Navigation End-to-End
+
 ### [220919]Perceptive Locomotion through Nonlinear Model Predictive Control
 
 * 2022-TRO
 * 用SDF做碰撞检测
 * 与其他工作不同（把整个地形考虑进优化问题？），用凸区域作为足端约束，只有合适的
 * 可以实现动态gait
-* 感知处理
-  * A：Filtering & Classification
-    * 1.inpainting：用临近最小值填补elevation map的空洞
-    * 2.均值滤波，减小噪声，移除离群点
-    * 3.setppablity 分类：inclination roughness甲醛
-  * B:Plane Segmentation：找了一块可踏的平面
-    * 用凸包算法算了个平面
-    * 保护措施：如果也给区域找不到平坦的通行于，用RANSAC找
-    * 保护措施：如果区域大小够，那就提供safe margin，如果不够，就不提供了。
-    * 不拒接小可行域，在极端情况下比较重要
+* 感知处理A：Filtering & Classification
+
+
+  * [ ] 1.inpainting：用临近最小值填补elevation map的空洞
+  * [ ] 2.均值滤波，减小噪声，移除离群点
+  * [ ] 3.setppablity 分类：inclination roughness甲醛
+
+
+  B:Plane Segmentation：找了一块可踏的平面
+
+  * [ ] 用凸包算法算了个平面
+  * [ ] 保护措施：如果也给区域找不到平坦的通行于，用RANSAC找
+  * [ ] 保护措施：如果区域大小够，那就提供safe margin，如果不够，就不提供了。
+  * [ ] 不拒接小可行域，在极端情况下比较重要
 
 ### [220919]Coupling Vision and Proprioception for Navigation of Legged Robots
 
